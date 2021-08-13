@@ -12,33 +12,19 @@
     <nav>
         <div class="center-container">
             <ul class="flex-container" id="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#home" id="text-home">Home</a></li>
+                <li><a href="#projects" id="text-projects">Projects</a></li>
                 <li><a href="CV_Audrius_Arlauskas_EN.pdf" target="_blank">CV (EN)</a></li>
                 <li><a href="CV_Audrius_Arlauskas_LT.pdf" target="_blank">CV (LT)</a></li>
+                <li><a href="#" onclick="switchLanguage()" id="text-language">Language</a></li>
                 <!-- <li><button><i class='fas fa-moon'></i></button></li> -->
             </ul>
-            <div id='hamburger' onclick='toggleMenu()'>
-                <span class='bar'></span>
-                <span class='bar'></span>
-                <span class='bar'></span>
+            <div id="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
-
-        <!-- <div class="center-container">
-            <ul class="flex-container">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="CV_Audrius_Arlauskas_EN.pdf" target="_blank">CV (EN)</a></li>
-                <li><a href="CV_Audrius_Arlauskas_LT.pdf" target="_blank">CV (LT)</a></li>
-                <li><button><i class='fas fa-moon'></i></button></li>
-            </ul>
-            <div id='hamburger' onclick='toggleMenu()'>
-                <span class='bar'></span>
-                <span class='bar'></span>
-                <span class='bar'></span>
-            </div>
-        </div> -->
     </nav>
 
     <section class="section-home">
@@ -46,7 +32,7 @@
         <rect class="bg-shape"></rect>
         <div class="center-container">
             <h1>Audrius Arlauskas</h1>
-            <p>Junior Front-end Web Developer</p>
+            <p id="text-subtitle">Junior Front-end Web Developer</p>
             <a href="https://www.linkedin.com/in/audrius-arlauskas/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/Aruidas?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
         </div>
@@ -55,7 +41,7 @@
     <section class="section-projects">
         <a id="projects" class="anchor"></a>
         <div class="section-title">
-            <h2>Projects</h2>
+            <h2 id="text-heading-projects">Projects</h2>
         </div>
 
         <div class="center-container flex-container">
@@ -74,6 +60,8 @@
         </div>
     </section>
 
-    <script src='app.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <script>translateText();</script>
 </body>
 </html>

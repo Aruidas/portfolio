@@ -181,6 +181,10 @@ nav a, nav i {
     opacity: 1;
 }
 
+.section-projects .flex-container > a:hover img {
+    filter: blur(10px);
+}
+
 .section-projects .flex-container img {
     position: absolute;
     top: 50%;
