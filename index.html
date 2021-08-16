@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://i.redd.it/01omcntn6ph71.png" data-addsearch="no_crop">
     <title>Audrius Arlauskas: front-end developer</title>
     <script src='https://kit.fontawesome.com/3ed6ace440.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav>
+<body class="themeable">
+    <nav class="themeable">
         <div class="center-container">
             <ul class="flex-container" id="nav-menu">
-                <li><a href="#home" id="text-home">Home</a></li>
-                <li><a href="#projects" id="text-projects">Projects</a></li>
+                <li><a href="#home" class="translatable">Home</a></li>
+                <li><a href="#projects" class="translatable">Projects</a></li>
                 <li><a href="CV_Audrius_Arlauskas_EN.pdf" target="_blank">CV (EN)</a></li>
                 <li><a href="CV_Audrius_Arlauskas_LT.pdf" target="_blank">CV (LT)</a></li>
-                <li><a href="#" onclick="switchLanguage()" id="text-language">Language</a></li>
-                <!-- <li><button><i class='fas fa-moon'></i></button></li> -->
+                <li><a href="#" onclick="switchLanguage()" class="translatable">Language</a></li>
+                <li><button onclick="switchTheme()"><i class="fas fa-moon" id="theme-switch"></i></button></li>
             </ul>
             <div id="hamburger" onclick="toggleMenu()">
                 <span class="bar"></span>
@@ -32,7 +33,7 @@
         <rect class="bg-shape"></rect>
         <div class="center-container">
             <h1>Audrius Arlauskas</h1>
-            <p id="text-subtitle">Junior Front-end Web Developer</p>
+            <p class="translatable">Junior Front-end Web Developer</p>
             <a href="https://www.linkedin.com/in/audrius-arlauskas/" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/Aruidas?tab=repositories" target="_blank"><i class="fab fa-github"></i></a>
         </div>
@@ -41,7 +42,7 @@
     <section class="section-projects">
         <a id="projects" class="anchor"></a>
         <div class="section-title">
-            <h2 id="text-heading-projects">Projects</h2>
+            <h2 class="translatable">Projects</h2>
         </div>
 
         <div class="center-container flex-container">
@@ -62,6 +63,5 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
-    <script>translateText();</script>
 </body>
 </html>

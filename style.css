@@ -1,6 +1,7 @@
 :root {
     --colPrimary: #ff9100;
     --colLight: #fff9f1;
+    --colDark: #303030;
     --mainResolution: 1600px;
 }
 
@@ -19,6 +20,10 @@ a {
 
 body {
     background: var(--colLight);
+}
+
+body.dark-theme {
+    background: var(--colDark);
 }
 
 button {
@@ -68,6 +73,10 @@ nav {
     padding: 30px 0;
     width: 100%;
     background: rgb(123, 123, 123);
+}
+
+nav.dark-theme {
+    background: var(--colDark);
 }
 
 nav .center-container .flex-container {
@@ -165,7 +174,7 @@ nav a, nav i {
     height: 100%;
     opacity: 0;
     background:#000000aa;
-    transition: opacity 0.4s;
+    transition: 0.4s opacity ease-out;
 }
 
 .section-projects .flex-container > a h3 {
@@ -202,7 +211,6 @@ nav a, nav i {
 }
 
 @media screen and (max-width: 800px) {
-
     #hamburger {
         display: block;
     }

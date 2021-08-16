@@ -1,3 +1,6 @@
+translateText(); // Apply initial translation once the page is loaded
+
+
 function toggleMenu() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
@@ -6,16 +9,6 @@ function toggleMenu() {
     navMenu.classList.toggle('open');
 }
 
-
-// var language;
-
-// function getLanguage() {
-//     (localStorage.getItem('language') == null) ? setLanguage('en') : false;
-//     $.ajax({
-//     url: '/language/' + localStorage.getItem('language') + '.json', 
-//     dataType: 'json', async: false, dataType: 'json', 
-//     success: function (lang) { language = lang } });
-// }
 
 function switchLanguage() {
     if (localStorage.getItem('language') == 'en') {
@@ -28,19 +21,35 @@ function switchLanguage() {
     translateText();
 }
 
-function translateText() {
-    if (localStorage.getItem('language') == 'lt') {
-        document.getElementById('text-home').textContent = "Pagrindinis";
-        document.getElementById('text-projects').textContent = "Projektai";
-        document.getElementById('text-language').textContent = "Kalba";
-        document.getElementById('text-subtitle').textContent = "Pradedantysis Front-end Tinklalapių Kūrėjas";
-        document.getElementById('text-heading-projects').textContent = "Projektai";
+
+function switchTheme() {
+    const themeSwitcher = document.getElementById('theme-switch');
+    var themeableElements = document.getElementsByClassName('themeable');
+
+    if(themeSwitcher.classList == 'fas fa-moon') {
+        for(var i = 0; i < themeableElements.length; i++) {
+            themeableElements[i].classList.add('dark-theme');
+        }
+        themeSwitcher.classList = 'fas fa-sun';
+    } else {
+        for(var i = 0; i < themeableElements.length; i++) {
+            themeableElements[i].classList.remove('dark-theme');
+        }
+        themeSwitcher.classList = 'fas fa-moon';
     }
-    else {
-        document.getElementById('text-home').textContent = "Home";
-        document.getElementById('text-projects').textContent = "Projects";
-        document.getElementById('text-language').textContent = "Language";
-        document.getElementById('text-subtitle').textContent = "Junior Front-end Web Developer";
-        document.getElementById('text-heading-projects').textContent = "Projects";
+}
+
+
+function translateText() {
+    let translationFields = document.getElementsByClassName('translatable');
+    let translationsEn = ['Home', 'Projects', 'Language', 'Junior Front-end Web Developer', 'Projects'];
+    let translationsLt = ['Pagrindinis', 'Projektai', 'Kalba', 'Pradedantysis Front-end Tinklalapių Kūrėjas', 'Projektai'];
+
+    for(var i = 0; i < translationFields.length; i++) {
+        if (localStorage.getItem('language') == 'lt') {
+            translationFields[i].textContent = translationsLt[i];
+        } else {
+            translationFields[i].textContent = translationsEn[i];
+        }
     }
 }
