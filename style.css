@@ -84,7 +84,12 @@ nav .center-container .flex-container {
     gap: 50px;
 }
 
+nav li.current {
+    box-shadow: 0 2px var(--colLight);
+}
+
 nav a, nav i {
+    padding: 4px 0;
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--colLight);
@@ -243,6 +248,10 @@ nav a, nav i {
     #nav-menu.open {
         top: 100%;
         transition: 0.3s top ease-in-out;
+    }
+
+    #nav-menu li {
+        box-shadow: unset;
     }
 
     #nav-menu a {

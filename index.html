@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://i.redd.it/01omcntn6ph71.png" data-addsearch="no_crop">
+    <!-- <meta property="og:image" content="https://i.redd.it/01omcntn6ph71.png"> -->
     <title>Audrius Arlauskas: front-end developer</title>
     <script src='https://kit.fontawesome.com/3ed6ace440.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png"/>
 </head>
 <body class="themeable">
     <nav class="themeable">
         <div class="center-container">
             <ul class="flex-container" id="nav-menu">
-                <li><a href="#home" class="translatable">Home</a></li>
-                <li><a href="#projects" class="translatable">Projects</a></li>
+                <li><a href="#home" class="translatable" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="#projects" class="translatable" onclick="closeMobileMenu()">Projects</a></li>
                 <li><a href="CV_Audrius_Arlauskas_EN.pdf" target="_blank">CV (EN)</a></li>
                 <li><a href="CV_Audrius_Arlauskas_LT.pdf" target="_blank">CV (LT)</a></li>
                 <li><a href="#" onclick="switchLanguage()" class="translatable">Language</a></li>
-                <li><button onclick="switchTheme()"><i class="fas fa-moon" id="theme-switch"></i></button></li>
+                <li><button onclick="switchTheme(); closeMobileMenu()"><i class="fas fa-moon" id="theme-switch"></i></button></li>
             </ul>
             <div id="hamburger" onclick="toggleMenu()">
                 <span class="bar"></span>
